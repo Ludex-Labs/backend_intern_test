@@ -15,6 +15,16 @@ Ensure you have the following installed:
     - **GraphQL** (for syntax highlighting and validation)
     - **Prisma** (for schema editing and database insights)
 
+### Setting Up Your Repository
+
+This project is provided as a **GitHub template**. To begin, follow these steps:
+
+1. Navigate to the template repository on GitHub.
+2. Click the **"Use this template"** button to create a new repository under your own GitHub account.
+3. Clone your newly created repository to your local machine.
+4. Ensure that your repository is **public**, or if you choose to keep it private, grant access to the GitHub user `mccjul`.
+5. Once you have completed the test, provide the link to your repository in your submission.
+
 ### Running the Project
 
 #### Launch the Database
