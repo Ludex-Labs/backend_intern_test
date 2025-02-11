@@ -116,7 +116,36 @@ Your task is to implement a **CRUD (Create, Read, Update, Delete) Todo backend**
 - Retrieve a single todo by ID
 - Delete todos
 
-## Relevant Documentation
+## **Technical Requirements**
+
+To successfully complete this test, ensure that your implementation meets the following requirements:
+
+- **Use TypeScript:** Your project should be fully typed, and TypeScript configurations should be properly set up.
+- **Use Prisma as ORM:** The database interactions should be handled using Prisma.
+- **GraphQL API Implementation:** The API should be implemented using GraphQL with appropriate queries and mutations.
+- **Follow Best Practices:** Code should be well-structured, modular, and follow standard best practices (e.g. error handling, and meaningful variable names).
+- **Database Schema:** The `Todo` entity should have at least the following fields:
+  - `id` (UUID)
+  - `title` (string)
+  - `completed` (boolean)
+  - `createdAt` (timestamp)
+  - `updatedAt` (timestamp)
+- **Environment Variables:** Use an `.env` file to configure database connections securely.
+- **Linting & Formatting:** Ensure that your code is properly formatted using ESLint and Prettier.
+- **Validations & Error Handling:**
+  - Validate user inputs before processing mutations.
+  - Handle potential errors, such as trying to update a non-existent todo.
+- **Version Control:** Use Git for version control with clear commit messages.
+
+## **Bonus Features (Optional)**
+
+These additional features are not required but will help your submission stand out:
+
+- **Pagination:** Implement pagination for retrieving todos.
+- **Filtering & Sorting:** Allow filtering by `completed` status and sorting by `createdAt`.
+- **Testing:** Write unit and integration tests using Jest to ensure the API functions correctly.
+
+## **Relevant Documentation**
 
 - [Prisma Documentation](https://www.prisma.io/docs/orm/prisma-client/queries/crud)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
