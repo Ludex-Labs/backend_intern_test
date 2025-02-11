@@ -10,6 +10,10 @@ Ensure you have the following installed:
 - [Docker](https://www.docker.com/get-started/)
 - [Git](https://git-scm.com/)
 - _(Recommended)_ [VS Code](https://code.visualstudio.com/)
+  - If you install VS Code, it is recommended to also install the following extensions:
+    - **ESLint** (for linting and code formatting)
+    - **GraphQL** (for syntax highlighting and validation)
+    - **Prisma** (for schema editing and database insights)
 
 ### Running the Project
 
@@ -101,3 +105,9 @@ Your task is to implement a **CRUD (Create, Read, Update, Delete) Todo backend**
 - Retrieve all completed todos
 - Retrieve a single todo by ID
 - Delete todos
+
+## Relevant Documentation
+
+- [Prisma Documentation](https://www.prisma.io/docs/orm/prisma-client/queries/crud)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
+- [GraphQL Guide](https://graphql.org/learn/)
