@@ -143,8 +143,8 @@ These additional features are not required but will help your submission stand o
 
 - **Pagination:** Implement pagination for retrieving todos.
 - **Filtering & Sorting:** Allow filtering by `completed` status and sorting by `createdAt`.
+- **(MEDIUM-HARD) Due Date:** Add a `dueDate` field to todos. Implement filtering for **overdue/upcoming** tasks and sort todos by time.
 - **(HARD) Testing:** Write unit and integration tests using Mocha to ensure the API functions correctly.
-- **(HARD) Due date:** Add a dueDate field to todos and implement a system that and also filters todos by overdue/upcoming and orders them by time.
 
 ## **Relevant Documentation**
 
