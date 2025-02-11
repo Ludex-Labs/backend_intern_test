@@ -1,44 +1,74 @@
 # LUDEX INTERNSHIP TEST
 
-## Getting started
+## Getting Started
 
-### Prerequisits
+### Prerequisites
 
-Ensure you have installed
+Ensure you have the following installed:
 
-- [nodejs](https://nodejs.org)
-- [docker](https://www.docker.com/get-started/)
-- [git](https://git-scm.com/)
-- [(recommended) vscode](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org)
+- [Docker](https://www.docker.com/get-started/)
+- [Git](https://git-scm.com/)
+- _(Recommended)_ [VS Code](https://code.visualstudio.com/)
 
-### Running the project
+### Running the Project
 
-#### Launch database
+#### Launch the Database
 
-First ensure that you have docker desktop installed. Once that is done make sure the program is running and in your terminal run
-`shell docker --version` to make sure it is currently installed to your path.
+First, ensure that you have **Docker Desktop** installed and running. To verify that Docker is installed and accessible from your terminal, run:
 
-if it is first cd into this directory and run `shell docker compose up -d`
+```sh
+docker --version
+```
 
-This will run a postgres database in a docker container which you will be using later.
+If Docker is installed, navigate to the project directory and start the database container by running:
 
-#### Run Migration
+```sh
+docker compose up -d
+```
 
-Now that the database is running you should now run `shell npm install` to get all of the dependencies for this project.
+This will launch a **PostgreSQL** database inside a Docker container, which will be used in later steps.
 
-Once everything is installed you can now run a migration to ensure the tables that are defined in the schema.prisma are now in your database.
+#### Run Migrations
 
-To run the migration run `shell npm run prisma:migrate`
+With the database running, install the project dependencies by executing:
 
-#### Run app
+```sh
+npm install
+```
 
-Now that everything else is setup we are going to run the app. To run it in watch mode (meaning whenever you change a file it will rerun the script) run in your terminal `shell npm run dev:watch`
+Once all dependencies are installed, apply database migrations to ensure the schema is correctly set up:
 
-Notice that this does two things before it actually runs the app. It first generates the typescript types from the prisma schema, and it generates the types from the graphql in typeDefinitions. This will be helpful if you have an eslint on your IDE.
+```sh
+npm run prisma:migrate
+```
 
-#### Testing using graphql playground
+#### Run the Application
 
-When the app begins to run. You will see that the app is running on localhost:4000. Go to your browser and input http://localhost:4000/graphql. You will see a UI that you can run graphql queries in. To run a Query
+Now that everything is set up, you can start the application. To run it in **watch mode** (which automatically restarts the app on file changes), use the following command:
+
+```sh
+npm run dev:watch
+```
+
+This command also performs two additional tasks before starting the app:
+
+1. **Generates TypeScript types** from the Prisma schema.
+2. **Generates GraphQL types** in `typeDefinitions`.
+
+These generated types will help improve your development experience, especially if you have **ESLint** enabled in your IDE.
+
+#### Testing Using GraphQL Playground
+
+Once the application is running, open your browser and navigate to:
+
+```
+http://localhost:4000/graphql
+```
+
+This will open the GraphQL Playground, a UI where you can execute GraphQL queries and mutations.
+
+To run a **query**, use the following example:
 
 ```graphql
 query {
@@ -46,34 +76,28 @@ query {
 }
 ```
 
-to run a Mutation
+To run a **mutation**, use:
 
 ```graphql
 mutation {
-  createSomething(input: { name: "bob" }) {
+  createSomething(input: { name: "Bob" }) {
     id
     name
   }
 }
 ```
 
-and on the right you will see the response from the backend.
+The response from the backend will appear on the right-hand side of the UI.
 
 ## The Test
 
-You are to make a CRUD (create, read, update, delete) todo backend. Using graphql you need to be able to
+Your task is to implement a **CRUD (Create, Read, Update, Delete) Todo backend** using GraphQL. The backend should support the following functionalities:
 
-- create todos,
-- Mark them as complete or incomplete
-- Change the title of the todo
-- Get all todos
-- Get all not completed todos
-- Get completed todos
-- Get a single todo by id
+- Create todos
+- Mark todos as complete or incomplete
+- Update the title of a todo
+- Retrieve all todos
+- Retrieve all incomplete todos
+- Retrieve all completed todos
+- Retrieve a single todo by ID
 - Delete todos
-
-## Relevant documentation
-
-[prisma](https://www.prisma.io/docs/orm/prisma-client/queries/crud)
-[typescript](https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html)
-[graphql](https://graphql.org/learn/)
